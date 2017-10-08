@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import app.silverlight.tony.easyapp.fragment.ChooseTargetFragment;
 import app.silverlight.tony.easyapp.fragment.MainFragment;
@@ -26,7 +28,19 @@ public class MainActivity extends AppCompatActivity {
         //Tool bar Controller
         toolBarController();
 
+        txtExitController();
+
     } //Main Method
+
+    private void txtExitController() {
+        TextView textView = (TextView) findViewById(R.id.txtExit);
+        textView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
