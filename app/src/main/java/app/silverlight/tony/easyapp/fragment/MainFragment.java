@@ -22,7 +22,7 @@ public class MainFragment extends Fragment{
 
     //Explicit
     private ImageView imageView;
-    private Button decButton, incButton;
+    private Button decButton, incButton, gotoButton;
 
     //My constant
     private int[] imageInts = new int[]{
@@ -49,6 +49,24 @@ public class MainFragment extends Fragment{
 //        Decrease Controller
         decreaseController();
 
+//        Go to Choose Image
+        goToChooseImage();
+    }
+
+    private void goToChooseImage() {
+        Button button = getView().findViewById(R.id.getToChoose);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                //Replace
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentFragmentMain,new ChooseTargetFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 
     private void decreaseController() {
