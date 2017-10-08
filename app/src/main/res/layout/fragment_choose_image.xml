@@ -23,13 +23,14 @@
         <ImageView
             android:layout_margin="10dp"
             android:id="@+id/imvImage"
-            android:src="@drawable/m1"
-            android:layout_width="@dimen/icon"
-            android:layout_height="@dimen/icon" />
+            android:src="@drawable/m2"
+            android:layout_width="200dp"
+            android:layout_height="220dp" />
 
         <!--Button-->
-        <Button
-            android:text="Choose Image"
+
+        <ImageView
+            android:src="@drawable/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
